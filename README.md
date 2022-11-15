@@ -1,4 +1,4 @@
-# -3.2-Pico-W-Webserver
+# 3.2-Pico-W-Webserver
 
 ![](imagen/portadatcnm.png)
 

@@ -1,4 +1,4 @@
-![](imagen/portadatcnm.png)
+![](portadatcnm.png)
 #    Tecnológico Nacional de México
 #   Instituto Tecnológico de Tijuana
 #        Subdirección Académica

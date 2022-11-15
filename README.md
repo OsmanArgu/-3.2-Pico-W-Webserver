@@ -14,3 +14,8 @@
 ##
 ##   Profesor: MC. René Solis Reyes
 ##     Semestre AGO - DIC 2022
+
+
+## PRACTICA 3.2 
+
+

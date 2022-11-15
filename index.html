@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pico W</title>
+  <style>
+    /* Header/Logo Title */
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: Verdana;
+      background: linear-gradient(to right bottom, #B92B27, #1565c0) fixed;
+    }
+    .main-container {
+      position: absolute;
+      display: flex;
+      width: 50%;
+      height: 600px;
+      left: 50%;
+      top: 50%;
+      background: #ffffff;
+      border-radius: 8px;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .sidebar{
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #6e5870;
+    }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 200px;
+    }
+    .logo-container img {
+      margin: auto;
+    }
+    .sidebar button{
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-bottom: 1px solid #6e5870;
+      background-color: #ffffff;
+      font-size: 18px;
+      color: #6e5870;
+      cursor: pointer;
+    }
+    .sidebar button:hover{
+      color: #fff;
+      background-color: #6e5870;
+    }
+    .sensores-container{
+      display: flex;
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+    }
+    .titulo{
+      display: flex;
+      flex-direction: column;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 18px;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: #6e5870;
+    }
+    .botones-container{
+      display: none;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 25px;
+    }
+    .on{
+      width: 100px;
+      background-color: white;
+      color: rgb(66, 138, 66);
+      padding: 10px 20px;
+      border: 1px solid rgb(66, 138, 66);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 60px;
+    }
+    .off{
+      width: 100px;
+      background-color: rgb(209, 81, 81);
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid rgb(209, 81, 81);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="logo-container">
+        <img src="logo.png">
+      </div>
+      <button onclick="cambiarTexto(1)">
+        Sensor uno
+      </button>
+      <button onclick="cambiarTexto(2)">
+        Sensor dos
+      </button>
+      <button onclick="cambiarTexto(3)">
+        Sensor tres
+      </button>
+    </div>
+    <div class="sensores-container">
+      <div class="titulo"><span id="titulo">Bienvenido!</span></div>
+      <div class="status-container">
+        <p>Current status: %s</p>
+      </div>
+      <div id="bc" class="botones-container">
+        <button id="button-on" class="on" href="" onClick="clickON()">ON</button>
+        <button id="button-off" class="off" href="" onClick="clickOFF()" >OFF</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    var active = false;
+
+    function clickON(){
+      active = true;
+      if(active){
+        let bg1 = document.getElementById("button-on").style.background = "rgb(66, 138, 66)"
+      let txt1 = document.getElementById("button-on").style.color = "white";
+      let bg2 = document.getElementById("button-off").style.background = "white";
+      let txt2 = document.getElementById("button-off").style.color = "rgb(209, 81, 81)";
+      }
+    }
+
+    function clickOFF(){
+      active = false;
+      if(!active){
+        let bg1 = document.getElementById("button-on").style.background = "white"
+        let txt1 = document.getElementById("button-on").style.color = "rgb(66, 138, 66)";
+        let bg2 = document.getElementById("button-off").style.background = "rgb(209, 81, 81)";
+        let txt2 = document.getElementById("button-off").style.color = "white";
+
+      }
+    }
+
+    function cambiarTexto(idSensor){
+      let texto=null
+      if(idSensor===1)
+      {
+        texto="Sensor Uno"
+        active = false;
+      }
+      if(idSensor===2)
+      {
+        texto="Sensor dos"
+        active = false
+      }
+      if(idSensor===3)
+      {
+        texto="Sensor Tres"
+        active = false
+      }
+      document.getElementById("titulo").innerHTML = texto;
+      let d1 = document.getElementById("bc").style.display = "flex";
+      clickOFF();
+    }
+  </script>
+</body>
+</html>

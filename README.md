@@ -1,7 +1,4 @@
-# 3.2-Pico-W-Webserver
-
 ![](imagen/portadatcnm.png)
-
 #    Tecnológico Nacional de México
 #   Instituto Tecnológico de Tijuana
 #        Subdirección Académica

@@ -16,6 +16,6 @@
 ##     Semestre AGO - DIC 2022
 ## 
 
-## PRACTICA 3.2 
+## PRACTICA 3.2 Web Server
 ![](evidencia.png)
 

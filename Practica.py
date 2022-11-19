@@ -154,15 +154,6 @@ while True:
             rojo.on()
             utime.sleep_ms(3000)
             
-        
-        
-       
-        
-       
-        
-        
-            
-            
         response = get_html('index.html')
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
         cl.send(response)

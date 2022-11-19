@@ -19,3 +19,5 @@
 ## PRACTICA 3.2 Web Server
 ![](evidencia.png)
 
+##DIAGRAMA
+![](diagrama.png)

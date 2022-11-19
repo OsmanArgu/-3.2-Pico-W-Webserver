@@ -20,4 +20,6 @@
 ![](evidencia.png)
 
 ##DIAGRAMA
+##
+##
 ![](diagrama.png)

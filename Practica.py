@@ -106,23 +106,21 @@ while True:
         
         r = str(r)
         #Codigo Motor
-        led_on = r.find('?led=on')
-        led_off = r.find('?led=off')
-        print('led_on = ', led_on)
-        print('led_off = ', led_off)
+        servo_on = r.find('?servo=on')
+        servo_off = r.find('?servo=off')
+        print('servo_on = ', servo_on)
+        print('servo_off = ', servo_off)
         
         led_ON = r.find('?led=ON')
         led_OFF = r.find('?led=OFF')
         print('led_ON = ', led_ON)
         print('led_OFF = ', led_OFF)
         
-        if led_on > -1:
-            led.value(1)
+        if servo_on > -1:
             servo.duty_u16(1311)
             time.sleep(0.5)
             
-        if led_off > -1:
-            led.value(1)
+        if servo_off > -1:
             servo.duty_u16(7864)
             time.sleep(0.5)
             
